@@ -7,7 +7,55 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 class="siteheader">Activity Test Website</h1>
-        
+    <script src="./main.js"></script>
+    <header>
+        <h1>Aloha Site</h1>
+        <nav>
+            <ul class="tabs">
+                <li class="tab active">
+                    <a data-tab="1">Meter to Feet</a>
+                </li>
+                <li class="tab">
+                    <a data-tab="2">Feet to Meter</a>
+                </li>
+                <li class="tab">
+                    <a data-tab="3">Celsius to Fahrenheit</a>
+                </li>
+                <li class="tab">
+                    <a data-tab="4">Fahrenheit to Celsius</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="page active" data-page="1">
+            <h2>Meter to Feet</h2>
+            <form>
+                <input type="text" id="mtrToFt">
+                <button id="convertToFt">Convert</button>
+            </form>
+        </div>
+        <div class="page" data-page="2">
+            <h2>Feet to Meter</h2>
+            <form>
+                <input type="text" id="ftToMtr">
+                <button id="convertToMtr">Convert</button>
+            </form>
+        </div>
+        <div class="page" data-page="3">
+            <h2>Celsius to Fahrenheit</h2>
+            <form>
+                <input type="text" id="celToFah">
+                <button id="convertToFah">Convert</button>
+            </form>
+        </div>
+        <div class="page" data-page="4">
+            <h2>Celsius to Fahrenheit</h2>
+            <form>
+                <input type="text" id="fahToCel">
+                <button id="convertToCel">Convert</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
