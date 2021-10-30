@@ -1,6 +1,53 @@
-.siteheader {
-    background-color: rgba(32, 32, 32, 0.979);
-    text-align: center;
-    padding: 30px;
-    color: beige;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+header {
+    background-color: gainsboro;
+    box-shadow: 0px 2px 4px gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+header nav .tabs {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+header nav .tabs .tab {
+    display: block;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+header nav .tabs .tab.active {
+    background-color: burlywood;
+    font-weight: bold;
+}
+header nav .tabs .tab:hover {
+    background-color: blanchedalmond;
+}
+main {
+    margin: 150px;
+}
+main h2 {
+    margin-bottom: 100px;
+}
+main .page {
+    display: none;
+}
+main .page.active {
+    display: flex;
+    padding: 100px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 4px gray;
+    border-radius: 3;
+    transition: 0.5s;
 }
