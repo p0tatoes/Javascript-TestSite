@@ -39,6 +39,7 @@ main h2 {
 }
 main .page {
     display: none;
+    transition: 0.5s;
 }
 main .page.active {
     display: flex;
@@ -49,5 +50,4 @@ main .page.active {
     background-color: whitesmoke;
     box-shadow: 0px 2px 4px gray;
     border-radius: 3;
-    transition: 0.5s;
 }
