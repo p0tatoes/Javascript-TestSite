@@ -9,47 +9,54 @@
 <body>
     <script src="./main.js"></script>
     <header>
-        <h1>Aloha Site</h1>
+        <h1 class="tab active">
+            <a data-tab="1">Aloha Site</a>
+        </h1>
         <nav>
             <ul class="tabs">
-                <li class="tab active">
-                    <a data-tab="1">Meter to Feet</a>
+                <li class="tab">
+                    <a data-tab="2">Meter to Feet</a>
                 </li>
                 <li class="tab">
-                    <a data-tab="2">Feet to Meter</a>
+                    <a data-tab="3">Feet to Meter</a>
                 </li>
                 <li class="tab">
-                    <a data-tab="3">Celsius to Fahrenheit</a>
+                    <a data-tab="4">Celsius to Fahrenheit</a>
                 </li>
                 <li class="tab">
-                    <a data-tab="4">Fahrenheit to Celsius</a>
+                    <a data-tab="5">Fahrenheit to Celsius</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="page active" data-page="1">
+            <h2>CS 1130 - Introduction to Computing</h2>
+            <p><i>By: Marvin Paul Eloja</i></p>
+            <h2>Student Assignment Website</h2>
+        </div>
+        <div class="page" data-page="2">
             <h2>Meter to Feet</h2>
             <form>
                 <input type="text" id="mtrToFt">
                 <button type="button" id="convertToFt">Convert</button>
             </form>
         </div>
-        <div class="page" data-page="2">
+        <div class="page" data-page="3">
             <h2>Feet to Meter</h2>
             <form>
                 <input type="text" id="ftToMtr">
                 <button type="button" id="convertToMtr">Convert</button>
             </form>
         </div>
-        <div class="page" data-page="3">
+        <div class="page" data-page="4">
             <h2>Celsius to Fahrenheit</h2>
             <form>
                 <input type="text" id="celToFah">
                 <button type="button" id="convertToFah">Convert</button>
             </form>
         </div>
-        <div class="page" data-page="4">
+        <div class="page" data-page="5">
             <h2>Celsius to Fahrenheit</h2>
             <form>
                 <input type="text" id="fahToCel">

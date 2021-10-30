@@ -13,6 +13,9 @@ header {
     padding-left: 100px;
     padding-right: 100px;
 }
+header h1.tab {
+    cursor: pointer;
+}
 header nav .tabs {
     display: flex;
     justify-content: flex-end;
@@ -35,6 +38,9 @@ main {
     margin: 150px;
 }
 main h2 {
+    margin-bottom: 100px;
+}
+main [data-page="1"] p{
     margin-bottom: 100px;
 }
 main .page {
