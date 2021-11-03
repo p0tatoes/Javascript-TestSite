@@ -1,68 +1,232 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Test Website</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Aloha Site - Student Assignments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <script src="./main.js"></script>
     <header>
-        <h1 class="tab active">
-            <a data-tab="1">Aloha Site</a>
-        </h1>
-        <nav>
-            <ul class="tabs">
-                <li class="tab">
-                    <a data-tab="2">Meter to Feet</a>
-                </li>
-                <li class="tab">
-                    <a data-tab="3">Feet to Meter</a>
-                </li>
-                <li class="tab">
-                    <a data-tab="4">Celsius to Fahrenheit</a>
-                </li>
-                <li class="tab">
-                    <a data-tab="5">Fahrenheit to Celsius</a>
-                </li>
-            </ul>
-        </nav>
+        <h1 class="tab active" data-tab="1">Aloha Site</h2>
+
+        <div class="tabs">
+            <div class="dropdown1"> <!--1 Converters-->
+                <span>Converter <i class="fa fa-caret-down"></i></span>
+                <div class="dropdown_content1">
+                    <p class="tab" data-tab="2">Meter to Feet</p>
+                    <p class="tab" data-tab="3">Feet to Meter</p>
+                    <p class="tab" data-tab="4">Celsius to Fahrenheit</p>
+                    <p class="tab" data-tab="5">Fahrenheit to Celsius</p>
+                </div>
+            </div>
+
+            <div class="dropdown2"> <!--2 Factorials, Sums, and Average-->
+                <span>Factorial, Summation, Average <i class="fa fa-caret-down"></i></span>
+                <div class="dropdown_content2">
+                    <p class="tab" data-tab="6"><i>N</i><sup>th</sup> Factorial</p>
+                    <p class="tab" data-tab="7">Summation of 1<sup>st</sup> <i>N</i> Numbers</p>
+                    <p class="tab" data-tab="8">Average of 1<sup>st</sup> <i>N</i> Numbers</p>
+                </div>
+            </div>
+
+            <div class="dropdown3"> <!--3 Income Tax-->
+                <span class="tab" data-tab="9">Income Tax Calculator</span>
+            </div>
+
+            <div class="dropdown4"> <!--4 Simple Payroll-->
+                <span class="tab" data-tab="10">Simple Payroll Table</span>
+            </div>
+
+        </div>
     </header>
+
     <main>
+
         <div class="page active" data-page="1">
-            <h2>CS 1130 - Introduction to Computing</h2>
-            <p><i>By: Marvin Paul Eloja</i></p>
-            <h2>Student Assignment Website</h2>
+            <h2>CS 1130: Introduction to Computing</h2>
+            <p><i>By: Marvin Paul D. Eloja</i></p>
+            <h3>Student Assignment Website</h3>
         </div>
-        <div class="page" data-page="2">
-            <h2>Meter to Feet</h2>
+
+        <div class="page" data-page="2"> <!--Meter to Feet-->
+            <h2>Meter to Feet Converter</h2>
             <form>
-                <input type="text" id="mtrToFt">
-                <button type="button" id="convertToFt">Convert</button>
+                <div>
+                    <label>Meter: </label>
+                    <input type="number" id="in_Meter">
+                </div>
+
+                <button type="button" id="btn_ConvertMeter">Convert</button>
+
+                <div>
+                    <label>Feet: </label>
+                    <input type="text" id="out_ConvertedMeter" readonly>
+                </div>
             </form>
         </div>
-        <div class="page" data-page="3">
-            <h2>Feet to Meter</h2>
+
+        <div class="page" data-page="3"><!--Feet to Meter-->
+            <h2>Feet to Meter Converter</h2>
             <form>
-                <input type="text" id="ftToMtr">
-                <button type="button" id="convertToMtr">Convert</button>
+                <div>
+                    <label>Feet: </label>
+                    <input type="number" id="in_Feet">
+                </div>
+
+                <button type="button" id="btn_ConvertFeet">Convert</button>
+
+                <div>
+                    <label>Meter: </label>
+                    <input type="text" id="out_ConvertedFeet" readonly>
+                </div>
             </form>
         </div>
-        <div class="page" data-page="4">
-            <h2>Celsius to Fahrenheit</h2>
+
+        <div class="page" data-page="4"><!--Celsius to Fahrenheit-->
+            <h2>Celsius to Fahrenheit Converter</h2>
             <form>
-                <input type="text" id="celToFah">
-                <button type="button" id="convertToFah">Convert</button>
+                <div>
+                    <label>Celsius: </label>
+                    <input type="number" id="in_Celsius">
+                </div>
+
+                <button type="button" id="btn_ConvertCelsius">Convert</button>
+
+                <div>
+                    <label>Fahrenheit: </label>
+                    <input type="text" id="out_ConvertedCelsius" readonly>
+                </div>
             </form>
         </div>
-        <div class="page" data-page="5">
-            <h2>Celsius to Fahrenheit</h2>
+
+        <div class="page" data-page="5"><!--Fahrenheit to Celsius-->
+            <h2>Fahrenheit to Celsius Converter</h2>
             <form>
-                <input type="text" id="fahToCel">
-                <button type="button" id="convertToCel">Convert</button>
+                <div>
+                    <label>Fahrenheit: </label>
+                    <input type="number" id="in_Fahrenheit">
+                </div>
+
+                <button type="button" id="btn_ConvertFahrenheit">Convert</button>
+
+                <div>
+                    <label>Celsius: </label>
+                    <input type="text" id="out_ConvertedFahrenheit" readonly>
+                </div>
             </form>
         </div>
+
+        <div class="page" data-page="6"><!--Nth Factorial-->
+            <h2><i>N</i><sup>th</sup> Factorial</h2>
+            <form>
+                <div>
+                    <label>First <i>N</i> Numbers: </label>
+                    <input type="number" id="in_Factorial">
+                </div>
+
+                <button type="button" id="btn_CalcFactorial">Calculate</button>
+
+                <div>
+                    <label>Answer: </label>
+                    <input type="text" id="out_Factorial" readonly>
+                </div>
+            </form>
+        </div>
+
+        <div class="page" data-page="7"><!--Sum of First N Numbers-->
+            <h2>Sum of the 1<sup>st</sup> <i>N</i><sup>th</sup> Numbers</h2>
+            <form>
+                <div>
+                    <label>First <i>N</i> Numbers: </label>
+                    <input type="number" id="in_Sum">
+                </div>
+
+                <button type="button" id="btn_CalcSum">Calculate</button>
+                
+                <div>
+                    <label>Answer: </label>
+                    <input type="text" id="out_Sum" readonly>
+                </div>
+            </form>
+        </div>
+
+        <div class="page" data-page="8"><!--Average of First N Numbers-->
+            <h2>Average of the 1<sup>st</sup> <i>N</i><sup>th</sup> Numbers</h2>
+            <form>
+                <div>
+                    <label>First <i>N</i> Numbers: </label>
+                    <input type="number" id="in_Average">
+                </div>
+
+                <button type="button" id="btn_CalcAverage">Calculate</button>
+                
+                <div>
+                    <label>Answer: </label>
+                    <input type="text" id="out_Average" readonly>
+                </div>
+            </form>
+        </div>
+
+        <div class="page" data-page="9"><!--Income Tax Calculator-->
+            <h2>Income Tax Calculator</h2>
+            <form>
+                <div>
+                    <label>Income: </label>
+                    <input type="number" id="in_Income">
+                </div>
+
+                <button type="button" id="btn_CalcTax">Calculate</button>
+
+                <div>
+                    <label>Income Tax: </label>
+                    <input type="text" id="out_Tax" readonly>
+                </div>
+            </form>
+        </div>
+
+        <div class="page" data-page="10"><!--Simple Payroll Generator-->
+            <h2>Simple Payroll Generator</h2>
+
+            <form>
+                <div class="addTable">
+                    <div>
+                        <label>Employee Name: </label>
+                        <input type="text" id="in_EmployeeName">
+                    </div>
+
+                    <div>
+                        <label>Days Worked: </label>
+                        <input type="number" id="in_DaysWorked">
+                    </div>
+
+                    <div>
+                        <label>Daily Rate: </label>
+                        <input type="number" id="in_DailyRate">
+                    </div>
+
+                    <div>
+                        <label>Deduction Amount: </label>
+                        <input type="number" id="in_DeductionAmount">
+                    </div>
+                </div>
+
+                <button type="button" id="btn_AddWorker">Add to Table</button>
+
+                <div class="removeTable">
+                        <label>Delete Line: </label>
+                        <input type="number" id="in_DelLine">
+                        <button type="button" id="btn_DelLine">Delete</button>
+                </div>
+            </form>
+
+            <div class="table"></div>
+        </div>
+
     </main>
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -4,56 +4,140 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+/**Header**/
+[data-tab] {
+    cursor: pointer;
+    transition: 0.5s;
+}
 header {
     background-color: gainsboro;
-    box-shadow: 0px 2px 4px gray;
+    box-shadow: 0px 2px 4px dimgrey;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 10px 150px;
 }
-header h1.tab {
-    cursor: pointer;
-}
-header nav .tabs {
+header .tabs {
     display: flex;
     justify-content: flex-end;
-    list-style-type: none;
+    align-items: center;
 }
-header nav .tabs .tab {
-    display: block;
-    padding: 15px 20px;
-    cursor: pointer;
+.tabs * span {
+    padding: 20px;
     transition: 0.5s;
 }
-header nav .tabs .tab.active {
-    background-color: burlywood;
+.dropdown1, .dropdown2 {
+    position: relative;
+}
+.dropdown1:hover span, .dropdown2:hover span, .dropdown3:hover span, .dropdown4:hover span {
+    background-color: dimgrey;
+    color: white;
     font-weight: bold;
 }
-header nav .tabs .tab:hover {
-    background-color: blanchedalmond;
+.dropdown_content1, .dropdown_content2 {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 1;
 }
+.dropdown_content1, .dropdown_content2 {
+    transition: 0.5s;
+}
+.dropdown1:hover .dropdown_content1 {
+    display: block;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 4px dimgrey;
+}
+.dropdown_content1 p {
+    padding: 10px 20px;
+}
+.dropdown2:hover .dropdown_content2 {
+    display: block;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 4px dimgrey;
+}
+.dropdown_content2 p {
+    padding: 10px 40px;
+}
+p.tab[data-tab]:hover {
+    background-color: lightgray;
+}
+/**End Header**/
+
+/**Main Body**/
 main {
     margin: 150px;
 }
-main h2 {
-    margin-bottom: 100px;
-}
-main [data-page="1"] p{
-    margin-bottom: 100px;
-}
-main .page {
+.page[data-page] {
     display: none;
-    transition: 0.5s;
 }
-main .page.active {
-    display: flex;
-    padding: 100px 50px;
+.page.active[data-page] {
+    padding: 150px;
+    border-radius: 5px;
+    background-color: rgb(223, 223, 223);
+    box-shadow: 0px 2px 4px dimgrey;
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+[data-page] > * {
+    margin-bottom: 100px;
+}
+[data-page] form > * {
+    margin-bottom: 30px;
+}
+[data-page] > *:last-child, [data-page] form:last-child {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+[data-page] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+[data-page] form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px dimgrey;
+}
+[data-page] .addTable {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+[data-page] button {
+    padding: 10px;
+}
+[data-page] input {
+    width: 100%;
+}
+[data-page] #in_DelLine {
+    width: 50%;
+}
+/**End Main Body**/
+
+/**Table**/
+.table table {
+    border-collapse: collapse;
+}
+.table table * {
+    border: 1px solid #000;
+    padding: 20px 30px;
+}
+.table table thead {
+    background-color: dimgrey;
+    color: whitesmoke;
+}
+.table table tbody tr:nth-child(odd) {
     background-color: whitesmoke;
-    box-shadow: 0px 2px 4px gray;
-    border-radius: 3;
+}
+.table table tbody tr:nth-child(even) {
+    background-color: gainsboro;
 }
